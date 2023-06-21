@@ -59,7 +59,7 @@ function getScore(){
             fetch('https://api.openai.com/v1/chat/completions', {
                 method: "POST", //do backend cung cấp
                 headers: {
-                    'Authorization': 'Bearer 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',
+                    'Authorization': 'Bearer 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',
                     "Content-Type": "application/json"     
             },
                 body: score
@@ -100,7 +100,7 @@ function getSample(){
             fetch('https://api.openai.com/v1/chat/completions', {
                 method: "POST", //do backend cung cấp
                 headers: {
-                    'Authorization': 'Bearer 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',
+                    'Authorization': 'Bearer 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',
                     "Content-Type": "application/json"     
             },
                 body: score
@@ -125,7 +125,7 @@ function getTopic(){
         fetch('https://api.openai.com/v1/chat/completions', {
             method: "POST", //do backend cung cấp
             headers: {
-                'Authorization': 'Bearer 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',
+                'Authorization': 'Bearer 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',
                 "Content-Type": "application/json"     
         },
             body: topic
