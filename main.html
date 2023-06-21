@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Hệ thống chấm điểm IELTS tự động</title>
+</head>
+<body>
+    <div style="width: 90%; margin:auto; text-align: center;">
+        <h1 style="font-size: 50px; color: rgb(173, 173, 71);">Automated IELTS grading system:</h1>
+        <h1>Topic</h1>
+
+        <textarea class="topic" id="topic" placeholder="Enter or create a topic automatically"></textarea>
+        <div id="loader-red" class="loader-red"></div>
+        <div style="display: flex; justify-content: center;">
+            <button id="getTopicBtn" class="button-24" role="button">Create topic automatically</button>
+            <button id="getSampleBtn" class="button-24" role="button">Create sample automatically</button>
+        </div>
+    </div>
+
+    <div style=" width:90%; margin: auto; margin-top: 20px; ">
+            <textarea class="answerInput" id="answer" placeholder="Enter answer"> </textarea>
+            <div style=" display: flex; justify-content:center ;margin: auto; width: 400px;">
+                <button id="getScoreBtn" class="button-19" role="button">Automatic scoring</button>
+            </div>
+            
+    </div>
+    <div id="error" style="font-size: 30px; color:red;text-align: center;">
+    </div>
+    <div id="score" style="font-size: 25px;">
+        <div id="loader-blue" class="loader-blue"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
