@@ -1,4 +1,4 @@
-const apiKey = process.env.API_KEY;
+
 const loadingOverlay = document.getElementById('loader-red');
 
 loadingOverlay.style.visibility = 'hidden';
@@ -21,7 +21,22 @@ function showLoadingOverlayScore() {
 function hideLoadingOverlayScore() {
     loadingOverlayScore.style.visibility = 'hidden';
 }
+let apikey = ""
+  fetch('apikey.json', {
+            method: "GET", //do backend cung cấp
+            headers: {
+                "Content-Type": "application/json"     
+        },
 
+        }
+    ).then(response => response.json())
+    .then(response =>  {
+                console.log(response)
+                apikey = response.apikey
+            }
+        )
+
+  //Xử lý khi request thành công
 
 
 
@@ -60,7 +75,7 @@ function getScore(){
             fetch('https://api.openai.com/v1/chat/completions', {
                 method: "POST", //do backend cung cấp
                 headers: {
-                    'Authorization': 'Bearer '+ apiKey,
+                    'Authorization': 'Bearer '+ apikey,
                     "Content-Type": "application/json"     
             },
                 body: score
@@ -126,7 +141,7 @@ function getTopic(){
         fetch('https://api.openai.com/v1/chat/completions', {
             method: "POST", //do backend cung cấp
             headers: {
-                'Authorization': 'Bearer '+ apiKey,
+                'Authorization': 'Bearer '+ apikey,
                 "Content-Type": "application/json"     
         },
             body: topic
